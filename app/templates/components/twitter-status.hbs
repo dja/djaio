@@ -72,12 +72,42 @@
         </p>
         <p><small>{{twitter-entities text=status.body.retweeted_status.text entities=status.body.retweeted_status.entities}}</small></p>
       </div>
-      <p class="align-self-end"><span class="text-muted pb-1"><small><a href="{{status.url}}" target="_blank">{{moment-from-now status.body.created_at interval=1000}}</a></small></span></p>
+      <p class="align-self-end">
+        <span class="text-muted pb-1">
+          <small>
+            {{link-out url=status.url text=(moment-from-now status.body.created_at interval=1000) segment-event='visit-tweet'}}
+          </small>
+        </span>
+      </p>
+    </div>
+  {{else if status.body.is_quote_status}}
+    <div class="d-flex flex-column justify-content-between p-2 w-100">
+      <div class="twitter-status--retweeted p-1">
+        <p class="twitter-status--retweeted-user d-flex">
+          <strong class="mr-1">{{status.body.quoted_status.user.name}}</strong>
+          <span>@{{status.body.quoted_status.user.screen_name}}</span>
+        </p>
+        <p><small>{{twitter-entities text=status.body.quoted_status.text entities=status.body.quoted_status.entities}}</small></p>
+      </div>
+      <p class="mt-1">{{twitter-entities text=status.body.text entities=status.body.entities}}</p>
+      <p class="align-self-end">
+        <span class="text-muted pb-1">
+          <small>
+            {{link-out url=status.url text=(moment-from-now status.body.created_at interval=1000) segment-event='visit-tweet'}}
+          </small>
+        </span>
+      </p>
     </div>
   {{else}}
     <div class="d-flex flex-column m-2">
       <p>{{twitter-entities text=status.body.text entities=status.body.entities}}</p>
-      <p class="align-self-end"><span class="text-muted pb-1"><small><a href="{{status.url}}" target="_blank">{{moment-from-now status.body.created_at interval=1000}}</a></small></span></p>
+      <p class="align-self-end">
+        <span class="text-muted pb-1">
+          <small>
+            {{link-out url=status.url text=(moment-from-now status.body.created_at interval=1000) segment-event='visit-tweet'}}
+          </small>
+        </span>
+      </p>
     </div>
   {{/if}}
 </div>
