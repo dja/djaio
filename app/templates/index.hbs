@@ -18,27 +18,19 @@
       <p class="text-muted">Helped students level-up in web development and data science.</p>
     </div>
     <div class="mb-2">
-      <p><strong><a href="https://calendly.com/dja/coffee" target="_blank">Let's get coffee →</a></strong></p>
+      <p>
+        <strong>{{link-out url='https://calendly.com/dja/coffee' text="Let's get coffee →" segment-event='request-cal'}}</strong>
+      </p>
     </div>
   </div>
   {{twitter-statuses statuses=model.twitterStatuses class="mt-4"}}
   <div class="footer d-flex flex-wrap justify-content-between align-items-center w-100 mt-4">
     <div class="social-links">
-      <a href="https://twitter.com/dja1o" class="btn btn-secondary mr-2" target="_blank">
-        <i>{{svg-jar 'twitter'}}</i>
-      </a>
-      <a href="https://instagram.com/dja1o" class="btn btn-secondary mr-2" target="_blank">
-        <i>{{svg-jar 'instagram'}}</i>
-      </a>
-      <a href="https://medium.com/@dja1o" class="btn btn-secondary mr-2" target="_blank">
-        <i>{{svg-jar 'medium'}}</i>
-      </a>
-      <a href="https://github.com/dja" class="btn btn-secondary mr-2" target="_blank">
-        <i>{{svg-jar 'github'}}</i>
-      </a>
-      <a href="https://linkedin.com/in/danieljacobarcher" class="btn btn-secondary" target="_blank">
-        <i>{{svg-jar 'linkedin'}}</i>
-      </a>
+      {{social-button url='https://twitter.com/dja1o' icon='twitter' segment-event='social-twitter' class='mr-2'}}
+      {{social-button url='https://instagram.com/dja1o' icon='instagram' segment-event='social-instagram' class='mr-2'}}
+      {{social-button url='https://medium.com/@dja1o' icon='medium' segment-event='social-medium' class='mr-2'}}
+      {{social-button url='https://github.com/dja' icon='github' segment-event='social-github' class='mr-2'}}
+      {{social-button url='https://linkedin.com/in/danieljacobarcher' icon='linkedin' segment-event='social-linkedin'}}
     </div>
     {{social-foursquare checkIn=model.foursquareCheckins.firstObject}}
   </div>
