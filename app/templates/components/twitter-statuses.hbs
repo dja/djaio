@@ -1,0 +1,4 @@
+{{yield}}
+{{#each statuses as |status index|}}
+   {{twitter-status status=status isVisible=(eq index selectedTweetIndex)}}
+{{/each}}

@@ -1,0 +1,18 @@
+{{yield}}
+{{svg-jar "foursquare" class=checkIn.theme}}
+<div class="ml-2">
+  <h6 class="mb-0">{{checkIn.body.venue.name}}</h6>
+  <div class="d-flex">
+    <small class="d-flex">
+      <p>
+        {{#if (eq checkIn.body.venue.location.cc 'US')}}
+          {{checkIn.body.venue.location.city}}, {{checkIn.body.venue.location.state}}
+        {{else}}
+          {{checkIn.body.venue.location.city}}
+        {{/if}}
+      </p>
+      <span class="ml-1 mr-1">•</span>
+      <p>{{moment-from-now checkIn.timestamp interval=10000}}</p>
+    </small>
+  </div>
+</div>
