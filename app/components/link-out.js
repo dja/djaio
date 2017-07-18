@@ -16,7 +16,7 @@ export default Ember.Component.extend({
 
   click(e) {
     let segmentEvent = this.get('segment-event');
-    if (isEmpty(ENV['segment']) && segmentEvent) {
+    if (!isEmpty(ENV['segment']) && segmentEvent) {
       let segment = this.get('segment');
       segment.trackEvent(segmentEvent);
     }
