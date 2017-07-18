@@ -1,0 +1,45 @@
+{{outlet}}
+<div class="main-container container-fluid d-flex flex-column align-items-start">
+  <div class="header mb-4">
+    <h2>daniel jacob archer</h2>
+    <h4>^^ a design and technology-driven product maker</h4>
+  </div>
+  <div class="body mb-auto">
+    <div class="mb-4">
+      <p>Currently <strong>Product Team Lead / Senior Developer at Hootsuite</strong></p>
+    </div>
+    <p class="text-muted">Previously</p>
+    <div class="mb-2">
+      <p><strong>Founding Engineer at Naritiv</strong></p>
+      <p class="text-muted">Built the most advanced analytics and content solution <br class="hidden-xs-down" />for brands and creators on Snapchat.</p>
+    </div>
+    <div class="mb-4">
+      <p><strong>Technology Course Producer at General Assembly</strong></p>
+      <p class="text-muted">Helped students level-up in web development and data science.</p>
+    </div>
+    <div class="mb-2">
+      <p><strong><a href="https://calendly.com/dja/coffee" target="_blank">Let's get coffee →</a></strong></p>
+    </div>
+  </div>
+  {{twitter-statuses statuses=model.twitterStatuses class="mt-4"}}
+  <div class="footer d-flex flex-wrap justify-content-between align-items-center w-100 mt-4">
+    <div class="social-links">
+      <a href="https://twitter.com/dja1o" class="btn btn-secondary mr-2" target="_blank">
+        <i>{{svg-jar 'twitter'}}</i>
+      </a>
+      <a href="https://instagram.com/dja1o" class="btn btn-secondary mr-2" target="_blank">
+        <i>{{svg-jar 'instagram'}}</i>
+      </a>
+      <a href="https://medium.com/@dja1o" class="btn btn-secondary mr-2" target="_blank">
+        <i>{{svg-jar 'medium'}}</i>
+      </a>
+      <a href="https://github.com/dja" class="btn btn-secondary mr-2" target="_blank">
+        <i>{{svg-jar 'github'}}</i>
+      </a>
+      <a href="https://linkedin.com/in/danieljacobarcher" class="btn btn-secondary" target="_blank">
+        <i>{{svg-jar 'linkedin'}}</i>
+      </a>
+    </div>
+    {{social-foursquare checkIn=model.foursquareCheckins.firstObject}}
+  </div>
+</div>
