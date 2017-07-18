@@ -1,7 +1,6 @@
 # djaio
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This codebase serves as the front-end for my personal website at dja.io. What follows is a standard Ember.js Readme.
 
 ## Prerequisites
 
@@ -39,7 +38,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+Auto-deploys via Heroku when PRs are merged into master :)
 
 ## Further Reading / Useful Links
 
