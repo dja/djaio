@@ -4,7 +4,7 @@
     {{#if (eq status.mediaCount 1)}}
       {{#if (or (eq status.mediaType 'video') (eq status.mediaType 'animated_gif'))}}
         <div class="twitter-status--media-1up {{status.mediaShape}}">
-           <video loop autoplay muted poster="{{status.mediaUrl}}" alt="{{status.mediaType}}">
+           <video loop autoplay playsinline muted poster="{{status.mediaUrl}}" alt="{{status.mediaType}}">
              {{#each status.body.extended_entities.media.firstObject.video_info.variants as |video_variant|}}
                 <source src="{{video_variant.url}}" type="{{video_variant.content_type}}">
              {{/each}}
