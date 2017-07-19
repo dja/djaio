@@ -66,7 +66,7 @@
   {{#if status.body.retweeted_status}}
     <div class="d-flex flex-column justify-content-between p-2 w-100">
       <div class="twitter-status--retweeted p-1">
-        <p class="twitter-status--retweeted-user d-flex">
+        <p class="twitter-status--retweeted-user d-flex flex-wrap">
           <strong class="mr-1">{{status.body.retweeted_status.user.name}}</strong>
           <span>@{{status.body.retweeted_status.user.screen_name}}</span>
         </p>
