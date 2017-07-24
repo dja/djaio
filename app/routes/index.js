@@ -17,7 +17,7 @@ export default Ember.Route.extend({
     });
   },
 
-  afterModel(model, transition) {
+  afterModel(/* model, transition */) {
     let self = this;
     let consumer = this.get('cableService').createConsumer(ENV.ws_host);
 

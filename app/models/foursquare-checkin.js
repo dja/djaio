@@ -1,6 +1,9 @@
 import Ember from 'ember';
 import Model from 'ember-data/model';
 import attr from 'ember-data/attr';
+const {
+  isEmpty
+} = Ember;
 
 export default Model.extend({
   timestamp: attr(''),
@@ -8,12 +11,12 @@ export default Model.extend({
 
   color: Ember.computed('body.venue', function() {
     let category = this.get('body.venue.categories.firstObject.name');
-    return this.get('categories')[category]['color'] || "#304865";
+    return isEmpty(category) ? this.get('categories')[category]['color'] : "#304865";
   }),
 
   theme: Ember.computed('body.venue', function() {
     let category = this.get('body.venue.categories.firstObject.name');
-    return this.get('categories')[category]['theme'] || "default";
+    return isEmpty(category) ? this.get('categories')[category]['theme'] : "default";
   }),
 
   categories: {
