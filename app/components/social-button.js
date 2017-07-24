@@ -15,7 +15,7 @@ export default Ember.Component.extend({
   target: '_blank',
   segment: service(),
 
-  click(e) {
+  click(/* ev */) {
     let segmentEvent = this.get('segment-event');
     if (!isEmpty(ENV['segment']) && segmentEvent) {
       let segment = this.get('segment');
