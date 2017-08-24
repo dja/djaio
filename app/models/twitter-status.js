@@ -28,9 +28,7 @@ export default Model.extend({
     let media = this.get('body.extended_entities.media.firstObject'),
       width = media.sizes.large.w,
       height = media.sizes.large.h;
-    if (width == height) {
-      return 'square';
-    } else if (width > height) {
+    if (width >= height) {
       return 'landscape';
     } else {
       return 'portrait';

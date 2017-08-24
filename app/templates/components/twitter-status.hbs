@@ -70,7 +70,7 @@
           <strong class="mr-1">{{status.body.retweeted_status.user.name}}</strong>
           <span>@{{status.body.retweeted_status.user.screen_name}}</span>
         </p>
-        <p><small>{{twitter-entities text=status.body.retweeted_status.text entities=status.body.retweeted_status.entities}}</small></p>
+        <p class="twitter-status--text"><small>{{twitter-entities text=status.body.retweeted_status.text entities=status.body.retweeted_status.entities}}</small></p>
       </div>
       <p class="align-self-end">
         <span class="text-muted pb-1">
@@ -87,9 +87,9 @@
           <strong class="mr-1">{{status.body.quoted_status.user.name}}</strong>
           <span>@{{status.body.quoted_status.user.screen_name}}</span>
         </p>
-        <p><small>{{twitter-entities text=status.body.quoted_status.text entities=status.body.quoted_status.entities}}</small></p>
+        <p class="twitter-status--text"><small>{{twitter-entities text=status.body.quoted_status.text entities=status.body.quoted_status.entities}}</small></p>
       </div>
-      <p class="mt-1">{{twitter-entities text=status.body.text entities=status.body.entities}}</p>
+      <p class="twitter-status--text mt-1">{{twitter-entities text=status.body.text entities=status.body.entities}}</p>
       <p class="align-self-end">
         <span class="text-muted pb-1">
           <small>
@@ -100,7 +100,7 @@
     </div>
   {{else}}
     <div class="d-flex flex-column m-2">
-      <p>{{twitter-entities text=status.body.text entities=status.body.entities}}</p>
+      <p class="twitter-status--text">{{twitter-entities text=status.body.text entities=status.body.entities}}</p>
       <p class="align-self-end">
         <span class="text-muted pb-1">
           <small>

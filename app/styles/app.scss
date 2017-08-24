@@ -207,6 +207,10 @@
   }
 }
 
+.twitter-status--text {
+ white-space: pre-wrap;
+}
+
 .twitter-status--retweeted {
   border: 1px solid black;
   border-radius: 2px;
