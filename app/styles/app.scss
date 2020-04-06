@@ -1,4 +1,4 @@
-@import "bootstrap";
+@import "ember-bootstrap/bootstrap";
 @import "bootstrap/_custom";
 
 .main-container {
@@ -299,3 +299,5 @@
 //     object-fit: cover;
 //   }
 // }
+
+@import "ember-bootstrap/bootstrap";
