@@ -4298,12 +4298,13 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
-ember-ajax@^2.4.1:
-  version "2.5.6"
-  resolved "https://registry.yarnpkg.com/ember-ajax/-/ember-ajax-2.5.6.tgz#a75f743ccf1b95e979a5cf96013b3dba8fa625e4"
-  integrity sha1-p190PM8blel5pc+WATs9uo+mJeQ=
+ember-ajax@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/ember-ajax/-/ember-ajax-5.0.0.tgz#404b17c93194ab37aff86b7b8607d8edab93c9ec"
+  integrity sha512-Pet0S5VuiO7PDOwyTIF28VHdR7BpugL+jp+6PxNHRQvAq3SkKmVnXN0W06rnOgicH3xX29S46fx7czkKOGB3gA==
   dependencies:
-    ember-cli-babel "^5.1.5"
+    ember-cli-babel "^7.5.0"
+    najax "^1.0.3"
 
 ember-browserify@^1.1.14:
   version "1.2.2"
@@ -4402,7 +4403,7 @@ ember-cli-babel@^6.0.0, ember-cli-babel@^6.18.0, ember-cli-babel@^6.6.0, ember-c
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-babel@^7.1.0, ember-cli-babel@^7.13.2, ember-cli-babel@^7.7.3:
+ember-cli-babel@^7.1.0, ember-cli-babel@^7.13.2, ember-cli-babel@^7.5.0, ember-cli-babel@^7.7.3:
   version "7.19.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.19.0.tgz#e6eddea18a867231fcf90a80689e92b98be9a63b"
   integrity sha512-HiWKuoyy35vGEr+iCw6gUnQ3pS5qslyTlKEDW8cVoMbvZNGYBgRxHed5nklVUh+BS74AwR9lsp25BTAagYAP9Q==
