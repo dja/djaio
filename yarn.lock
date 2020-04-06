@@ -4298,13 +4298,6 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
-ember-ajax@^2.4.1:
-  version "2.5.6"
-  resolved "https://registry.yarnpkg.com/ember-ajax/-/ember-ajax-2.5.6.tgz#a75f743ccf1b95e979a5cf96013b3dba8fa625e4"
-  integrity sha1-p190PM8blel5pc+WATs9uo+mJeQ=
-  dependencies:
-    ember-cli-babel "^5.1.5"
-
 ember-browserify@^1.1.14:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/ember-browserify/-/ember-browserify-1.2.2.tgz#598e76640bfa7fa124e9564c9c5be91ccfb533c1"
@@ -4332,13 +4325,6 @@ ember-browserify@^1.1.14:
     symlink-or-copy "^1.0.0"
     through2 "^2.0.0"
     walk-sync "^0.2.7"
-
-ember-cable@^0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/ember-cable/-/ember-cable-0.8.1.tgz#37c9720a7c06f71c9cfc4a09c3de50c21853b759"
-  integrity sha512-U4Bkq9sNE49+EmYpzI/5E5GAMJ2EhQWfaWuWngR4hj5uktV/naLs9VI7Ha4TUQK+lYrQm+NXubWThVBrBcrXxA==
-  dependencies:
-    ember-cli-babel "^6.6.0"
 
 ember-cli-app-version@^2.0.0:
   version "2.1.0"
@@ -4518,7 +4504,7 @@ ember-cli-htmlbars@2.0.3:
     json-stable-stringify "^1.0.0"
     strip-bom "^3.0.0"
 
-ember-cli-htmlbars@^1.0.3, ember-cli-htmlbars@^1.1.1:
+ember-cli-htmlbars@^1.1.1:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-1.3.5.tgz#65be9678b274b5e7861d7f75c188780af7ef9d13"
   integrity sha512-Qur/anb0Vk57qmIhGLkSzl8X1QIMoae6pLa14MRQ8+YD2N5fNs3qdhEFf0SDBquPOH1QxQtraiNQvji47QBJyg==
@@ -4949,6 +4935,13 @@ ember-moment@^7.3.1:
     ember-getowner-polyfill "^2.2.0"
     ember-macro-helpers "^2.1.0"
 
+ember-poll@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/ember-poll/-/ember-poll-1.4.0.tgz#bc598a49a531e36bc781860ab504263bfacbd80d"
+  integrity sha512-os4PKEgRTmcEd+gKDtWt2Qn81ZiWG3HtzO9E4eaG2UL44Kli6OzIxhoQGa2YqxY+rxlvUhREZh8P8Gf6O9AWEA==
+  dependencies:
+    ember-cli-babel "^6.6.0"
+
 ember-qunit@^2.0.0-beta.1:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/ember-qunit/-/ember-qunit-2.2.0.tgz#3cdf400031c93a38de781a7304819738753b7f99"
@@ -5064,7 +5057,7 @@ ember-try@^0.2.15:
     rsvp "^3.0.17"
     semver "^5.1.0"
 
-ember-twitter-entities@^2.2.10:
+ember-twitter-entities@^2.2.13:
   version "2.2.13"
   resolved "https://registry.yarnpkg.com/ember-twitter-entities/-/ember-twitter-entities-2.2.13.tgz#c4c3266b76f5cf77b4df930862199a51099946e3"
   integrity sha512-381CnxOwHAyV/D0HTcmrK5/zCOhmYw3Ex+aigQT/q8nJdJO2FgEHMMxMVU5PaIM93O6Id30ERarPD6mWHrthYQ==
@@ -5080,15 +5073,6 @@ ember-weakmap@^3.0.0:
     browserslist "^3.1.1"
     debug "^3.1.0"
     ember-cli-babel "^6.6.0"
-
-ember-welcome-page@^2.0.2:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/ember-welcome-page/-/ember-welcome-page-2.0.4.tgz#9506250cb5edc14449c8c294b2d4d3db27f615d3"
-  integrity sha1-lQYlDLXtwURJyMKUstTT2yf2FdM=
-  dependencies:
-    broccoli-funnel "^1.0.1"
-    ember-cli-babel "^5.1.6"
-    ember-cli-htmlbars "^1.0.3"
 
 encodeurl@~1.0.2:
   version "1.0.2"

@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import DS from 'ember-data';
+import { pluralize } from 'ember-inflector';
 import ENV from '../config/environment';
 
 export default DS.RESTAdapter.extend({
@@ -8,6 +9,6 @@ export default DS.RESTAdapter.extend({
 
   pathForType: function(modelName) {
     var underscored = Ember.String.underscore(modelName);
-    return Ember.String.pluralize(underscored);
+    return pluralize(underscored);
   }
 });

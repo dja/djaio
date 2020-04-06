@@ -16,18 +16,27 @@ export default Model.extend({
 
   mediaUrl: Ember.computed('body.extended_entities.media.[]', function() {
     let media = this.get('body.extended_entities.media.firstObject');
+    if (typeof media == 'undefined') {
+      return;
+    }
     return media.media_url_https + ':small';
   }),
 
   mediaType: Ember.computed('body.extended_entities.media.[]', function() {
     let media = this.get('body.extended_entities.media.firstObject');
+    if (typeof media == 'undefined') {
+      return;
+    }
     return media.type;
   }),
 
   mediaShape: Ember.computed('body.extended_entities.media.[]', function() {
-    let media = this.get('body.extended_entities.media.firstObject'),
-      width = media.sizes.large.w,
-      height = media.sizes.large.h;
+    let media = this.get('body.extended_entities.media.firstObject');
+    if (typeof media == 'undefined') {
+      return;
+    }
+    let width = media.sizes.large.w,
+        height = media.sizes.large.h;
     if (width >= height) {
       return 'landscape';
     } else {
