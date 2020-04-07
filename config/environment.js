@@ -24,7 +24,9 @@ module.exports = function(environment) {
 
     fastboot: {
       hostWhitelist: [/^localhost:\d+$/]
-    }
+    },
+
+    bugsnagAPIKey: process.env.BUGSNAG_API_KEY
   };
 
   if (environment === 'development') {

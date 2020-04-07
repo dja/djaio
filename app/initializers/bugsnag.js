@@ -1,16 +1,12 @@
-import { assert, debug } from '@ember/debug';
 import Ember from 'ember';
+import bugsnag from '@bugsnag/js';
+import ENV from '../config/environment';
 
 export function initialize( /* application */ ) {
-  // application.inject('route', 'foo', 'service:foo');
-  const bugsnagLoaded = typeof Bugsnag !== 'undefined';
-  assert("Bugsnag hasn't loaded yet.", !bugsnagLoaded);
-  if (bugsnagLoaded && (this.config && this.config.environment !== 'test')) {
-    debug('Bugsnag Error Hanlder setup');
-    Ember.onerror = function(error) {
-      Bugsnag.notifyException(error)
-    };
-  }
+  var bugsnagClient = bugsnag(ENV.bugsnagAPIKey);
+  Ember.onerror = function(error) {
+    bugsnagClient.notify(error)
+  };
 }
 
 export default {
