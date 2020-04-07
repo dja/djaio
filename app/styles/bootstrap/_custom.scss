@@ -3,17 +3,17 @@ body {
 }
 
 .btn.btn-secondary {
-  border: 2px solid black;
+  border: 2px solid var(--color-primary-text);
   background-color: transparent;
-  color: black;
+  color: var(--color-primary-text);
   border-radius: 2px;
   font-weight: 500;
   padding: 0.5rem 0.75rem;
   cursor: pointer;
 
   &:hover {
-    color: white;
-    background-color: black;
-    border-color: black;
+    color: var(--color-primary-bg);
+    background-color: var(--color-primary-text);
+    border-color: var(--color-primary-text);
   }
 }
