@@ -70,12 +70,12 @@
           <strong class="mr-1">{{status.body.retweeted_status.user.name}}</strong>
           <span>@{{status.body.retweeted_status.user.screen_name}}</span>
         </p>
-        <p class="twitter-status--text"><small>{{twitter-entities text=status.body.retweeted_status.text entities=status.body.retweeted_status.entities}}</small></p>
+        <p class="twitter-status--text"><small><TwitterEntities @text={{status.body.retweeted_status.text}} @entities={{status.body.retweeted_status.entities}} /></small></p>
       </div>
       <p class="align-self-end">
         <span class="text-muted pb-1">
           <small>
-            {{link-out url=status.url text=(moment-from-now status.body.created_at interval=1000) segment-event='visit-tweet'}}
+            <LinkOut @url={{status.url}} @text={{moment-from-now status.body.created_at interval=1000}} @segment-event="visit-tweet" />
           </small>
         </span>
       </p>
@@ -87,24 +87,24 @@
           <strong class="mr-1">{{status.body.quoted_status.user.name}}</strong>
           <span>@{{status.body.quoted_status.user.screen_name}}</span>
         </p>
-        <p class="twitter-status--text"><small>{{twitter-entities text=status.body.quoted_status.text entities=status.body.quoted_status.entities}}</small></p>
+        <p class="twitter-status--text"><small><TwitterEntities @text={{status.body.quoted_status.text}} @entities={{status.body.quoted_status.entities}} /></small></p>
       </div>
-      <p class="twitter-status--text mt-1">{{twitter-entities text=status.body.text entities=status.body.entities}}</p>
+      <p class="twitter-status--text mt-1"><TwitterEntities @text={{status.body.text}} @entities={{status.body.entities}} /></p>
       <p class="align-self-end">
         <span class="text-muted pb-1">
           <small>
-            {{link-out url=status.url text=(moment-from-now status.body.created_at interval=1000) segment-event='visit-tweet'}}
+            <LinkOut @url={{status.url}} @text={{moment-from-now status.body.created_at interval=1000}} @segment-event="visit-tweet" />
           </small>
         </span>
       </p>
     </div>
   {{else}}
     <div class="d-flex flex-column m-2">
-      <p class="twitter-status--text">{{twitter-entities text=status.body.text entities=status.body.entities}}</p>
+      <p class="twitter-status--text"><TwitterEntities @text={{status.body.text}} @entities={{status.body.entities}} /></p>
       <p class="align-self-end">
         <span class="text-muted pb-1">
           <small>
-            {{link-out url=status.url text=(moment-from-now status.body.created_at interval=1000) segment-event='visit-tweet'}}
+            <LinkOut @url={{status.url}} @text={{moment-from-now status.body.created_at interval=1000}} @segment-event="visit-tweet" />
           </small>
         </span>
       </p>

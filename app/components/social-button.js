@@ -1,14 +1,9 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { inject as service } from '@ember/service';
+import { isEmpty } from '@ember/utils';
 import ENV from '../config/environment';
 
-const {
-  inject: {
-    service
-  },
-  isEmpty
-} = Ember;
-
-export default Ember.Component.extend({
+export default Component.extend({
   tagName: 'a',
   classNames: ['btn', 'btn-secondary'],
   attributeBindings: ['url:href', 'target'],
@@ -16,9 +11,9 @@ export default Ember.Component.extend({
   segment: service(),
 
   click(/* ev */) {
-    let segmentEvent = this.get('segment-event');
+    let segmentEvent = this['segment-event'];
     if (!isEmpty(ENV['segment']) && segmentEvent) {
-      let segment = this.get('segment');
+      let segment = this.segment;
       segment.trackEvent(segmentEvent);
     }
   }

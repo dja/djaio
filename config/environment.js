@@ -20,6 +20,10 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    fastboot: {
+      hostWhitelist: [/^localhost:\d+$/]
     }
   };
 
@@ -48,6 +52,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.fastboot.hostWhitelist = ['localhost:3000'];
     ENV.host = process.env.api_host;
     ENV.namespace = process.env.api_namespace;
     ENV.ws_host = process.env.ws_host;

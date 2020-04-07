@@ -1,10 +1,11 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import Component from '@ember/component';
 import moment from 'moment';
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNames: ['social-foursquare'],
 
-  backgroundColor: Ember.computed('model.foursquareCheckin.color', function() {
+  backgroundColor: computed('model.foursquareCheckin.color', function() {
     let color = this.get('model.foursquareCheckin.color'),
       time = this.get('model.foursquareCheckin.timestamp'),
       hour = moment(time).hour();
