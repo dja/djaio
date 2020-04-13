@@ -24,9 +24,7 @@ module.exports = function(environment) {
 
     fastboot: {
       hostWhitelist: [/^localhost:\d+$/]
-    },
-
-    bugsnagAPIKey: process.env.BUGSNAG_API_KEY
+    }
   };
 
   if (environment === 'development') {
@@ -54,7 +52,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.fastboot.hostWhitelist = ['localhost:3000'];
+    ENV.fastboot.hostWhitelist = ['dja.io', 'danieljacobarcher.com'];
     ENV.host = process.env.api_host;
     ENV.namespace = process.env.api_namespace;
     ENV.ws_host = process.env.ws_host;

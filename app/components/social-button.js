@@ -8,6 +8,7 @@ export default Component.extend({
   classNames: ['btn', 'btn-secondary'],
   attributeBindings: ['url:href', 'target'],
   target: '_blank',
+  rel: 'noopener noreferrer',
   segment: service(),
 
   click(/* ev */) {

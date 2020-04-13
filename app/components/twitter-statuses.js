@@ -5,15 +5,15 @@ import { inject as service } from '@ember/service';
 const TWITTER_POLL_INT = 10000;
 
 export default Component.extend({
+  classNames: ['twitter-statuses'],
   poll: service(),
 
   init() {
     this._super(...arguments);
-    let pollId = this.poll.addPoll({
+    this.pollId = this.poll.addPoll({
       interval: TWITTER_POLL_INT,
       callback: this.goToNextStatus.bind(this)
     });
-    this.set('pollId', pollId);
   },
 
   currentStatus: computed('statuses', 'tweetIndex', function() {
@@ -24,7 +24,7 @@ export default Component.extend({
 
   goToNextStatus() {
     let index = this.selectedTweetIndex;
-    if (index + 1 >= this.get('statuses.length')) {
+    if (index + 1 >= this.statuses.length) {
       index = 0;
     } else {
       index += 1;

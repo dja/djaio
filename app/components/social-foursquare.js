@@ -6,8 +6,8 @@ export default Component.extend({
   classNames: ['social-foursquare'],
 
   backgroundColor: computed('model.foursquareCheckin.color', function() {
-    let color = this.get('model.foursquareCheckin.color'),
-      time = this.get('model.foursquareCheckin.timestamp'),
+    let color = this.model.foursquareCheckin.color,
+      time = this.model.foursquareCheckin.timestamp,
       hour = moment(time).hour();
     if (hour >= 19 || hour < 5) {
       return this._colorLuminance(color, -0.25);

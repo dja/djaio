@@ -7,6 +7,7 @@ export default Component.extend({
   tagName: 'a',
   attributeBindings: ['url:href', 'target'],
   target: '_blank',
+  rel: 'noopener noreferrer',
   segment: service(),
 
   click(/* ev */) {

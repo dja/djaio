@@ -1,110 +1,110 @@
 {{yield}}
-<div class="twitter-status d-flex {{if (eq status.mediaCount 1) status.mediaShape}} {{if (not-eq status.mediaCount 1) 'flex-column'}}">
+<div class="twitter-status d-flex {{if (eq @status.mediaCount 1) @status.mediaShape}} {{if (not-eq @status.mediaCount 1) 'flex-column'}}">
   <div class="twitter-status--media">
-    {{#if (eq status.mediaCount 1)}}
-      {{#if (or (eq status.mediaType 'video') (eq status.mediaType 'animated_gif'))}}
-        <div class="twitter-status--media-1up {{status.mediaShape}}">
-           <video loop autoplay playsinline muted poster="{{status.mediaUrl}}" alt="{{status.mediaType}}">
-             {{#each status.body.extended_entities.media.firstObject.video_info.variants as |video_variant|}}
+    {{#if (eq @status.mediaCount 1)}}
+      {{#if (or (eq @status.mediaType 'video') (eq @status.mediaType 'animated_gif'))}}
+        <div class="twitter-status--media-1up {{@status.mediaShape}}">
+           <video loop autoplay playsinline muted poster="{{@status.mediaUrl}}" alt="{{@status.mediaType}}">
+             {{#each @status.body.extended_entities.media.firstObject.video_info.variants as |video_variant|}}
                 <source src="{{video_variant.url}}" type="{{video_variant.content_type}}">
              {{/each}}
            </video>
         </div>
       {{else}}
-        <div class="twitter-status--media-1up {{status.mediaShape}}">
-           <img src="{{status.mediaUrl}}" alt="{{status.mediaType}}">
+        <div class="twitter-status--media-1up {{@status.mediaShape}}">
+           <img src="{{@status.mediaUrl}}" alt="{{@status.mediaType}}">
         </div>
       {{/if}}
-    {{else if (eq status.mediaCount 2)}}
+    {{else if (eq @status.mediaCount 2)}}
       <div class="twitter-status--media d-flex flex-wrap">
         <div class="twitter-status--media-left">
           <div class="twitter-status--media-img">
-            <img src="{{status.body.extended_entities.media.[0].media_url_https}}" alt="{{status.body.extended_entities.media.[0].type}}">
+            <img src="{{@status.body.extended_entities.media.[0].media_url_https}}" alt="{{@status.body.extended_entities.media.[0].type}}">
           </div>
         </div>
         <div class="twitter-status--media-right">
           <div class="twitter-status--media-img">
-            <img src="{{status.body.extended_entities.media.[1].media_url_https}}" alt="{{status.body.extended_entities.media.[1].type}}">
+            <img src="{{@status.body.extended_entities.media.[1].media_url_https}}" alt="{{@status.body.extended_entities.media.[1].type}}">
           </div>
         </div>
       </div>
-    {{else if (eq status.mediaCount 3)}}
+    {{else if (eq @status.mediaCount 3)}}
       <div class="twitter-status--media d-flex flex-wrap">
         <div class="twitter-status--media-left">
-          <img src="{{status.body.extended_entities.media.[0].media_url_https}}" alt="{{status.body.extended_entities.media.[0].type}}">
+          <img src="{{@status.body.extended_entities.media.[0].media_url_https}}" alt="{{@status.body.extended_entities.media.[0].type}}">
         </div>
         <div class="twitter-status--media-right">
           <div class="twitter-status--media-img">
-            <img src="{{status.body.extended_entities.media.[1].media_url_https}}" alt="{{status.body.extended_entities.media.[1].type}}">
+            <img src="{{@status.body.extended_entities.media.[1].media_url_https}}" alt="{{@status.body.extended_entities.media.[1].type}}">
           </div>
           <div class="twitter-status--media-img">
-            <img src="{{status.body.extended_entities.media.[2].media_url_https}}" alt="{{status.body.extended_entities.media.[2].type}}">
+            <img src="{{@status.body.extended_entities.media.[2].media_url_https}}" alt="{{@status.body.extended_entities.media.[2].type}}">
           </div>
         </div>
       </div>
-    {{else if (eq status.mediaCount 4)}}
+    {{else if (eq @status.mediaCount 4)}}
       <div class="twitter-status--media-4up d-flex flex-wrap">
         <div class="twitter-status--media-left">
           <div class="twitter-status--media-img">
-            <img src="{{status.body.extended_entities.media.[0].media_url_https}}" alt="{{status.body.extended_entities.media.[0].type}}">
+            <img src="{{@status.body.extended_entities.media.[0].media_url_https}}" alt="{{@status.body.extended_entities.media.[0].type}}">
           </div>
           <div class="twitter-status--media-img">
-            <img src="{{status.body.extended_entities.media.[1].media_url_https}}" alt="{{status.body.extended_entities.media.[1].type}}">
+            <img src="{{@status.body.extended_entities.media.[1].media_url_https}}" alt="{{@status.body.extended_entities.media.[1].type}}">
           </div>
         </div>
         <div class="twitter-status--media-right">
           <div class="twitter-status--media-img">
-            <img src="{{status.body.extended_entities.media.[2].media_url_https}}" alt="{{status.body.extended_entities.media.[2].type}}">
+            <img src="{{@status.body.extended_entities.media.[2].media_url_https}}" alt="{{@status.body.extended_entities.media.[2].type}}">
           </div>
           <div class="twitter-status--media-img">
-            <img src="{{status.body.extended_entities.media.[3].media_url_https}}" alt="{{status.body.extended_entities.media.[3].type}}">
+            <img src="{{@status.body.extended_entities.media.[3].media_url_https}}" alt="{{@status.body.extended_entities.media.[3].type}}">
           </div>
         </div>
       </div>
     {{/if}}
   </div>
-  {{#if status.body.retweeted_status}}
+  {{#if @status.body.retweeted_status}}
     <div class="d-flex flex-column justify-content-between p-2 w-100">
       <div class="twitter-status--retweeted p-1">
         <p class="twitter-status--retweeted-user d-flex flex-wrap">
-          <strong class="mr-1">{{status.body.retweeted_status.user.name}}</strong>
-          <span>@{{status.body.retweeted_status.user.screen_name}}</span>
+          <strong class="mr-1">{{@status.body.retweeted_status.user.name}}</strong>
+          <span>@{{@status.body.retweeted_status.user.screen_name}}</span>
         </p>
-        <p class="twitter-status--text"><small><TwitterEntities @text={{status.body.retweeted_status.text}} @entities={{status.body.retweeted_status.entities}} /></small></p>
+        <p class="twitter-status--text"><small><TwitterEntities @text={{@status.body.retweeted_status.text}} @entities={{@status.body.retweeted_status.entities}} /></small></p>
       </div>
       <p class="align-self-end">
         <span class="text-muted pb-1">
           <small>
-            <LinkOut @url={{status.url}} @text={{moment-from-now status.body.created_at interval=1000}} @segment-event="visit-tweet" />
+            <LinkOut @url={{@status.url}} @text={{moment-from-now @status.body.created_at interval=1000}} @segment-event="visit-tweet" />
           </small>
         </span>
       </p>
     </div>
-  {{else if status.body.is_quote_status}}
+  {{else if @status.body.is_quote_status}}
     <div class="d-flex flex-column justify-content-between p-2 w-100">
       <div class="twitter-status--retweeted p-1">
         <p class="twitter-status--retweeted-user d-flex">
-          <strong class="mr-1">{{status.body.quoted_status.user.name}}</strong>
-          <span>@{{status.body.quoted_status.user.screen_name}}</span>
+          <strong class="mr-1">{{@status.body.quoted_status.user.name}}</strong>
+          <span>@{{@status.body.quoted_status.user.screen_name}}</span>
         </p>
-        <p class="twitter-status--text"><small><TwitterEntities @text={{status.body.quoted_status.text}} @entities={{status.body.quoted_status.entities}} /></small></p>
+        <p class="twitter-status--text"><small><TwitterEntities @text={{@status.body.quoted_status.text}} @entities={{@status.body.quoted_status.entities}} /></small></p>
       </div>
-      <p class="twitter-status--text mt-1"><TwitterEntities @text={{status.body.text}} @entities={{status.body.entities}} /></p>
+      <p class="twitter-status--text mt-1"><TwitterEntities @text={{@status.body.text}} @entities={{@status.body.entities}} /></p>
       <p class="align-self-end">
         <span class="text-muted pb-1">
           <small>
-            <LinkOut @url={{status.url}} @text={{moment-from-now status.body.created_at interval=1000}} @segment-event="visit-tweet" />
+            <LinkOut @url={{@status.url}} @text={{moment-from-now @status.body.created_at interval=1000}} @segment-event="visit-tweet" />
           </small>
         </span>
       </p>
     </div>
   {{else}}
     <div class="d-flex flex-column m-2">
-      <p class="twitter-status--text"><TwitterEntities @text={{status.body.text}} @entities={{status.body.entities}} /></p>
+      <p class="twitter-status--text"><TwitterEntities @text={{@status.body.text}} @entities={{@status.body.entities}} /></p>
       <p class="align-self-end">
         <span class="text-muted pb-1">
           <small>
-            <LinkOut @url={{status.url}} @text={{moment-from-now status.body.created_at interval=1000}} @segment-event="visit-tweet" />
+            <LinkOut @url={{@status.url}} @text={{moment-from-now @status.body.created_at interval=1000}} @segment-event="visit-tweet" />
           </small>
         </span>
       </p>

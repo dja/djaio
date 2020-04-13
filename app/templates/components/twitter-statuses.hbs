@@ -1,6 +1,6 @@
 {{yield}}
-{{#each statuses as |status index|}}
-  {{#if (eq index selectedTweetIndex)}}
+{{#each @statuses as |status index|}}
+  {{#if (eq index this.selectedTweetIndex)}}
     <TwitterStatus @status={{status}} />
   {{/if}}
 {{/each}}
