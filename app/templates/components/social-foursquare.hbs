@@ -1,17 +1,17 @@
 {{yield}}
-{{svg-jar "foursquare" class=checkIn.theme}}
+{{svg-jar "foursquare" class=@checkIn.theme}}
 <div class="ml-2">
-  <h6 class="mb-0">{{checkIn.body.venue.name}}</h6>
+  <h6 class="mb-0">{{@checkIn.body.venue.name}}</h6>
   <div class="d-flex">
     <small class="d-flex flex-wrap">
       <p class="mr-1">
-        {{#if (eq checkIn.body.venue.location.cc 'US')}}
-          {{checkIn.body.venue.location.city}}, {{checkIn.body.venue.location.state}}
+        {{#if (eq @checkIn.body.venue.location.cc 'US')}}
+          {{@checkIn.body.venue.location.city}}, {{@checkIn.body.venue.location.state}}
         {{else}}
-          {{checkIn.body.venue.location.city}}
+          {{@checkIn.body.venue.location.city}}
         {{/if}}
       </p>
-      <p><span class="mr-1">•</span>{{moment-from-now checkIn.timestamp interval=10000}}</p>
+      <p><span class="mr-1">•</span>{{moment-from-now @checkIn.timestamp interval=10000}}</p>
     </small>
   </div>
 </div>

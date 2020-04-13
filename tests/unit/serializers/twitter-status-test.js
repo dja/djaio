@@ -1,15 +1,17 @@
-import { moduleForModel, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
 
-moduleForModel('twitter-status', 'Unit | Serializer | twitter status', {
-  // Specify the other units that are required for this test.
-  needs: ['serializer:twitter-status']
-});
+import { run } from '@ember/runloop';
 
-// Replace this with your real tests.
-test('it serializes records', function(assert) {
-  let record = this.subject();
+module('Unit | Serializer | twitter status', function(hooks) {
+  setupTest(hooks);
 
-  let serializedRecord = record.serialize();
+  // Replace this with your real tests.
+  test('it serializes records', function(assert) {
+    let record = run(() => this.owner.lookup('service:store').createRecord('twitter-status'));
 
-  assert.ok(serializedRecord);
+    let serializedRecord = record.serialize();
+
+    assert.ok(serializedRecord);
+  });
 });
