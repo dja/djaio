@@ -5803,10 +5803,10 @@ escodegen@^1.11.0, escodegen@^1.6.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-plugin-ember@^8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-8.2.0.tgz#90c14c82a6e81280c27baaf64b62c1c4786b5f26"
-  integrity sha512-QJhqkYoLOoEm2jodozxztGA5nxvc6pmeUJCdhxIyDCCRGb7+E/FS6dfJ/WMqTbiePlmNJ0EZSOUgUG54LdHsRQ==
+eslint-plugin-ember@^8.5.0:
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-8.5.0.tgz#08660485edcf78c716b7db7c0834c970d06a3dc1"
+  integrity sha512-tj8GQbm5XknbUDp4FrwMLGBprxqzoi9JAszXyCwMPJQBipinHyyAxIRbu57/ENJVyeGRmQTme1WM4PJuMh3kFQ==
   dependencies:
     "@ember-data/rfc395-data" "^0.0.4"
     ember-rfc176-data "^0.3.12"
