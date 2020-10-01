@@ -42,7 +42,7 @@
     "ember-poll": "^1.4.0",
     "ember-qunit": "^4.6.0",
     "ember-resolver": "^7.0.0",
-    "ember-source": "~3.17.0",
+    "ember-source": "~3.21.3",
     "ember-svg-jar": "^0.10.3",
     "ember-template-lint": "^2.5.2",
     "ember-truth-helpers": "^2.1.0",
