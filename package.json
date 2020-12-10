@@ -55,7 +55,7 @@
     "qunit-dom": "^1.2.0"
   },
   "engines": {
-    "node": "12",
+    "node": "12.18.2",
     "yarn": "1.16.0"
   },
   "ember": {
