@@ -5053,10 +5053,10 @@ ember-cli-sass@^7.0.0:
     broccoli-sass-source-maps "^2.1.0"
     ember-cli-version-checker "^2.1.0"
 
-ember-cli-segment@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-segment/-/ember-cli-segment-4.0.0.tgz#3aa6614dcfafdb75162b1cc30ac1cec9c05d0f6b"
-  integrity sha512-ux7lJO/YTJaPvigbVwKOFaZErLdfIleI89xf2XFn531lzHHNNClIgk5yYjs9wHA4jP9t5TmofpayA9D4PimMKQ==
+ember-cli-segment@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-segment/-/ember-cli-segment-4.2.0.tgz#e26946fabb5b252b8291a86e93a2ab8db53ae744"
+  integrity sha512-kx6LQYFDKxxCLjiXZ31ewbHYi2kvXO6w9MTQE5wPP2GeUEVpFi31C5tWy1Y/t2e7biiEZYVCef6EJORIJOlinA==
   dependencies:
     babel-plugin-ember-modules-api-polyfill "^2.9.0"
     ember-cli-babel "^7.8.0"
