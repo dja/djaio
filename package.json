@@ -44,7 +44,7 @@
     "ember-resolver": "^7.0.0",
     "ember-source": "~3.17.0",
     "ember-svg-jar": "^0.10.3",
-    "ember-template-lint": "^2.5.2",
+    "ember-template-lint": "^3.3.0",
     "ember-truth-helpers": "^2.1.0",
     "ember-twitter-entities": "^2.2.13",
     "eslint": "^6.8.0",
